@@ -1,2 +1,2 @@
 # jobsearch
-education app  Job Search site  
+education app  "Job Search" site  
