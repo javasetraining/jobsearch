@@ -96,6 +96,6 @@
         </dependency>
     </dependencies>
     <build>
-        <finalName>SpringSecurityApp</finalName>
+        <finalName>jobsearchApp</finalName>
     </build>
 </project>

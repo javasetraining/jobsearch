@@ -1,7 +1,7 @@
 <component name="ArtifactManager">
   <artifact type="war" name="jobsearchApp:war">
     <output-path>$PROJECT_DIR$/jobsearchApp/target</output-path>
-    <root id="archive" name="SpringSecurityApp.war">
+    <root id="archive" name="jobsearchApp.war">
       <element id="artifact" artifact-name="jobsearchApp:war exploded" />
     </root>
   </artifact>
