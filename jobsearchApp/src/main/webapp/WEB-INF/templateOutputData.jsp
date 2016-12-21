@@ -100,9 +100,6 @@
 
 </article>
 
-</div>
-
-
 </body>
 
 </html>
