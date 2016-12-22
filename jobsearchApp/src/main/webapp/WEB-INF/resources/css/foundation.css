@@ -1,4 +1,5 @@
 @charset "UTF-8";
+
 /**
  * Foundation for Sites by ZURB
  * Version 6.3.0
@@ -35,6 +36,20 @@ body {
 /**
      * Add the correct display in IE 9-.
      */
+
+body {
+  background: #F0F0F3;
+}
+
+
+.login-box{
+  background: #fff;
+  border: 1px solid #ddd;
+  margin: 100px 0;
+  padding: 40px 20px 0 20px;
+}
+
+
 article,
 aside,
 footer,
