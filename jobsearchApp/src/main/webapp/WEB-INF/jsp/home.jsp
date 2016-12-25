@@ -17,6 +17,7 @@
             </div>
             <!-- /.panel-body -->
         </div>
+
         <!-- /.panel -->
     </jsp:attribute>
 </t:general_form>
