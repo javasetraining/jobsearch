@@ -29,12 +29,12 @@
                             <c:forEach var="user"  items="${userList}" >
                                 <tr>
                                     <td>${user.userId}</td>
-                                    <td>${user.login}</td>  
+                                    <td>${user.login}</td>
                                 </tr>
                             </c:forEach>
                         </tbody>
                     </table>
-    
+
                     <h1>parser</h1>
                     <table class="table table-striped table-bordered table-hover">
                         <thead>
@@ -47,7 +47,7 @@
                             <c:forEach var="parser"  items="${parserList}" >
                                 <tr>
                                     <td>${parser.parserId}</td>
-                                    <td>${parser.parserName}</td>  
+                                    <td>${parser.parserName}</td>
                                 </tr>
                             </c:forEach>
                         </tbody>
@@ -66,17 +66,19 @@
                             <c:forEach var="vacancy"  items="${vacancyList}" >
                                 <tr>
                                     <td>${vacancy.vacancyId}</td>
-                                    <td>${vacancy.vacancyName}</td>  
+                                    <td>${vacancy.vacancyName}</td>
                                     <td>${vacancy.companyName}</td>
-                                    <td>${vacancy.creationDate}</td>  
+                                    <td>${vacancy.creationDate}</td>
                                 </tr>
                             </c:forEach>
                         </tbody>
                     </table>
-                
-                
-                
+
+
+
             </div>
+
+
             <!-- /.panel-body -->
         </div>
         <!-- /.panel -->
