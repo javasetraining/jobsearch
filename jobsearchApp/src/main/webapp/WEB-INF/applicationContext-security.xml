@@ -8,30 +8,44 @@
 
     <http security="none" pattern="dist/**"/>
     <http security="none" pattern="bower_components/**"/>
-        
+
 
     <http auto-config="false" use-expressions="true">
         <intercept-url pattern="/" access="permitAll"></intercept-url>
-        <intercept-url pattern="/login" access="permitAll"></intercept-url>
+        <intercept-url pattern="/login" access="isAuthenticated()"></intercept-url>
         <intercept-url pattern="/logout" access="permitAll"></intercept-url>
-        <intercept-url pattern="/userhome" access="hasAuthority('client')"></intercept-url> 
-           
-        
-        <form-login login-page="/login"
-                    authentication-success-handler-ref="customAuthenticationSuccessHandler"
-                    username-parameter="j_username"
-                    password-parameter="j_password"
-                    login-processing-url="/j_spring_security_check"
+
+        <intercept-url pattern="/userhome" access="hasAuthority('client')"></intercept-url>
+        <csrf disabled="true"/>
+
+
+        <form-login login-page="/loginForm"
+                    login-processing-url="/appLogin"
+                    username-parameter="username"
+                    password-parameter="password"
                     authentication-failure-url="/login?error=true"
-        />
+                    default-target-url = "/login"/>
+                   <!-- authentication-success-handler-ref="customAuthenticationSuccessHandler"-->
+
+
+
+
         <logout logout-success-url="/login" logout-url="/j_spring_security_logout" invalidate-session="true"/>
     </http>
 
     <beans:import resource="applicationContext.xml"/>
 
     <authentication-manager alias="authenticationManager">
-        <authentication-provider user-service-ref="userDetailsService"/>
+       <!-- <authentication-provider> <user-service>
+            <user name="user" password="1234" authorities="ROLE_ADMIN" />
+
+        </user-service>
+        </authentication-provider>-->
+
+        <authentication-provider user-service-ref="userDetailsService"></authentication-provider>
     </authentication-manager>
+
+
 
     <beans:bean id="userDetailsService" class="ua.pp.iserf.service.impl.UserDetailsServiceImpl">
     </beans:bean>

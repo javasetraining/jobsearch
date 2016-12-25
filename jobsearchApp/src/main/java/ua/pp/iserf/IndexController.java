@@ -1,6 +1,5 @@
 package ua.pp.iserf;
 
-import java.util.List;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,6 +12,8 @@ import ua.pp.iserf.service.ParserService;
 import ua.pp.iserf.service.UserService;
 import ua.pp.iserf.service.VacancyService;
 
+import java.util.List;
+
 @Controller
 @RequestMapping("/")
 public class IndexController {
@@ -21,10 +22,10 @@ public class IndexController {
 
     @Autowired
     UserService userService;
-    
+
     @Autowired
     ParserService parserService;
-        
+
     @Autowired
     VacancyService vacancyService;
 
@@ -35,13 +36,13 @@ public class IndexController {
         List userList = userService.findAll();
         List parserList = parserService.findAll();
         List vacancyList = vacancyService.findAll();
-        
+
         modelMap.addAttribute("title", "View users");
         modelMap.addAttribute("userList", userList);
         modelMap.addAttribute("parserList", parserList);
         modelMap.addAttribute("vacancyList", vacancyList);
 
-        
-        return new ModelAndView("login");
+
+        return new ModelAndView("loginForm");
     }
 }
