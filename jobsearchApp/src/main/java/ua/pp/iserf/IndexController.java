@@ -43,6 +43,6 @@ public class IndexController {
         modelMap.addAttribute("vacancyList", vacancyList);
 
 
-        return new ModelAndView("loginForm");
+        return new ModelAndView("index");
     }
 }
