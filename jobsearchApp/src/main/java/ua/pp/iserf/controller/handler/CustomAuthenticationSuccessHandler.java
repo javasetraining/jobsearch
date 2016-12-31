@@ -20,12 +20,8 @@ public class CustomAuthenticationSuccessHandler implements AuthenticationSuccess
         Collection<? extends GrantedAuthority> auths = authentication.getAuthorities();
         for (GrantedAuthority authorities : auths) {
             if (authorities.getAuthority().equals("admin")) {
-                httpServletResponse.sendRedirect("listuser");
+                httpServletResponse.sendRedirect("userhome");
             } else if (authorities.getAuthority().equals("client")) {
-                httpServletResponse.sendRedirect("userhome");
-            } else if (authorities.getAuthority().equals("master")) {
-                httpServletResponse.sendRedirect("userhome");
-            } else if (authorities.getAuthority().equals("manager")) {
                 httpServletResponse.sendRedirect("userhome");
             }
         }

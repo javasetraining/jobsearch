@@ -22,6 +22,6 @@ public class HomeController {
         modelMap.addAttribute("title", "User home ");
         modelMap.addAttribute("username", username);
 
-        return new ModelAndView("home");
+        return new ModelAndView("userhome");
     }
 }

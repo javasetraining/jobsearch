@@ -7,14 +7,12 @@
              xmlns:beans="http://www.springframework.org/schema/beans">
 
     <http security="none" pattern="dist/**"/>
-    <http security="none" pattern="bower_components/**"/>
-        
 
     <http auto-config="false" use-expressions="true">
         <intercept-url pattern="/" access="permitAll"></intercept-url>
         <intercept-url pattern="/login" access="permitAll"></intercept-url>
         <intercept-url pattern="/logout" access="permitAll"></intercept-url>
-        <intercept-url pattern="/userhome" access="hasAuthority('client')"></intercept-url> 
+        <intercept-url pattern="/userhome" access="hasAuthority('admin')"></intercept-url> 
            
         
         <form-login login-page="/login"
