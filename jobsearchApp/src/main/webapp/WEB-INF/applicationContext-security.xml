@@ -13,6 +13,7 @@
         <intercept-url pattern="/login" access="permitAll"></intercept-url>
         <intercept-url pattern="/logout" access="permitAll"></intercept-url>
         <intercept-url pattern="/userhome" access="hasAuthority('admin')"></intercept-url> 
+        <intercept-url pattern="/parsersetting" access="hasAuthority('admin')"></intercept-url> 
            
         
         <form-login login-page="/login"
