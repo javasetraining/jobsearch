@@ -14,12 +14,14 @@
         <title>Title</title>
     </head>
     <body>
-        <header>
-            <div class="top-bar">
-                <div class="top-bar-left">
+        <header style="background-color: #eee;
+    padding-bottom: 5px;">
+             <div class="row">
+            <div class="large-4 columns">
+                
                     <h3 style="color:#0e476b;"><a href="<c:url value="/"/>">Java Job Search</a></h3>
                 </div>
-                <div class="top-bar-search" style="float: left; margin-left:200px;">
+            <div class="large-4 columns">
                     <ul class="menu">
                         <li><input type="search" placeholder="Search"></li>
                         <li>
@@ -27,12 +29,14 @@
                         </li>
                     </ul>
                 </div>
-                <div class="top-bar-right">
+                 <div class="large-4 columns">
                    <a href="<c:url value="/login"/>">Login</a>
                 </div>
-            </div>
+           
+             </div>
         </header>
-        <article>
+                <article style="margin-top: 15px;
+    margin-bottom: 15px;">
             <jsp:invoke fragment="content" />
 
         </article>

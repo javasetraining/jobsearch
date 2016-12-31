@@ -14,26 +14,9 @@ import java.util.List;
 @RequestMapping("/login")
 public class LoginController {
 
-//    @RequestMapping(method = RequestMethod.GET)
-//    public String index() {
-//        return "login";
-//    }
-//
-
-    @Autowired
-    UserService userService;
-
-    @RequestMapping( method = RequestMethod.GET)
-    public ModelAndView userLogin(ModelMap modelMap) {
-
-
-        List userList = userService.findAll();
-        modelMap.addAttribute("title", "View users");
-        modelMap.addAttribute("userList", userList);
-
-        return new ModelAndView("login");
+    @RequestMapping(method = RequestMethod.GET)
+    public String index() {
+        return "login";
     }
-
-
 
 }

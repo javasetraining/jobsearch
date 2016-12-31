@@ -6,79 +6,35 @@
 <%@ taglib prefix="t" tagdir="/WEB-INF/tags"%>
 <c:url value="/j_spring_security_check" var="loginUrl"/>
 
-<t:general_form title="login form">
+<t:general_form title="home">
     <jsp:attribute name="content">
 
+        <div class="row">
+            <div class="large-4 columns" style="float: left;">
+                <div class="panel-body">
 
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                Notifications Panel
-            </div>
-            <!-- /.panel-heading -->
-            <div class="panel-body">
+                    <h3>Login page</h3>
+                    <div>
 
-                <h1>USER</h1>
-                    <table class="table table-striped table-bordered table-hover">
-                        <thead>
-                            <tr>
-                                <th>Id</th>
-                                <th>login</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <c:forEach var="user"  items="${userList}" >
-                                <tr>
-                                    <td>${user.userId}</td>
-                                    <td>${user.login}</td>  
-                                </tr>
-                            </c:forEach>
-                        </tbody>
-                    </table>
-    
-                    <h1>parser</h1>
-                    <table class="table table-striped table-bordered table-hover">
-                        <thead>
-                            <tr>
-                                <th>parserId</th>
-                                <th>parserName</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <c:forEach var="parser"  items="${parserList}" >
-                                <tr>
-                                    <td>${parser.parserId}</td>
-                                    <td>${parser.parserName}</td>  
-                                </tr>
-                            </c:forEach>
-                        </tbody>
-                    </table>
-                <h1>vacancy</h1>
-                    <table class="table table-striped table-bordered table-hover">
-                        <thead>
-                            <tr>
-                                <th>vacancyId</th>
-                                <th>vacancyName</th>
-                                <th>companyName</th>
-                                <th>creationDate</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <c:forEach var="vacancy"  items="${vacancyList}" >
-                                <tr>
-                                    <td>${vacancy.vacancyId}</td>
-                                    <td>${vacancy.vacancyName}</td>  
-                                    <td>${vacancy.companyName}</td>
-                                    <td>${vacancy.creationDate}</td>  
-                                </tr>
-                            </c:forEach>
-                        </tbody>
-                    </table>
-                
-                
-                
+                        <form:form action="${loginUrl}" method="POST">
+
+                            <p><input type="text" name="j_username" placeholder="Login" maxlength="25"></p>
+
+                            <p><input type="password" name="j_password" placeholder="Password" maxlength="25"></p>
+
+                            <input type="submit" name="submit" class="login login-submit  btn btn-lg btn-success" value="Login">
+
+                            <c:if test="${not empty param['error']}">
+                                <h5>Login or Password is not valid. Please try again.</h5>
+                            </c:if>
+
+                        </form:form>
+
+                    </div>
+                </div>
             </div>
-            <!-- /.panel-body -->
-        </div>
-        <!-- /.panel -->
+        </div> 
+
     </jsp:attribute>
 </t:general_form>
+
