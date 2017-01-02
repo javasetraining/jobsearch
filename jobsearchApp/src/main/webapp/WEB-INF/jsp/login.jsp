@@ -10,9 +10,17 @@
     <jsp:attribute name="content">
 
         <div class="row">
-            <div class="large-4 columns" style="float: left;">
+            <div class="large-4 columns login-form-column">
                 <div class="panel-body">
-
+        <table>
+            <tr>
+                <td> 
+                    <p><b>Admin:</b></p>
+                    <p>login=admin</p>
+                    <p>pass=1234</p>
+                </td>  
+            </tr> 
+        </table>
                     <h3>Login page</h3>
                     <div>
 

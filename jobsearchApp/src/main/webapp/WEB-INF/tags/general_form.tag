@@ -8,18 +8,23 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
         <link rel="stylesheet" href="http://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
         <link href='http://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css' rel='stylesheet'
               type='text/css'>
-        <title>Title</title>
+        <link href="<c:url  value="/static/css/app.css" />" rel="stylesheet">
+        <title>${title}</title>
     </head>
     <body>
-        <header style="background-color: #eee;
-                padding-bottom: 5px;">
+        <header>
             <div class="row">
                 <div class="large-4 columns">
 
-                    <h3 style="color:#0e476b; font-weight: bold;"><a href="<c:url value="/"/>">Java Job Search</a></h3>
+                    <h3><a href="<c:url value="/"/>">Java Job Search</a></h3>
                 </div>
                 <div class="large-4 columns">
                     <ul class="menu">
@@ -29,16 +34,19 @@
                         </li>
                     </ul>
                 </div>
-                <div class="large-4 columns">
+                <div class="large-4 columns login-column">
                     <a href="<c:url value="/login"/>">Login</a>
                 </div>
 
             </div>
         </header>
-        <article style="margin-top: 15px;
-                 margin-bottom: 15px;">
+        <article>
             <jsp:invoke fragment="content" />
-
         </article>
+        <footer>
+            <div class="row">
+                    <span class="copyright">©2017 JavaJobSearch</span>
+            </div>
+        </footer>
     </body>
 </html>

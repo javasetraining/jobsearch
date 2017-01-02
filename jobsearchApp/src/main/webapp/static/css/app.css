@@ -1,0 +1,35 @@
+header, footer{
+    background-color: #eee;
+    padding-bottom: 5px;
+    padding-top: 10px;
+}
+header h3 {
+    color:#0e476b;
+    font-weight: bold;
+
+}
+.row .login-column {
+     text-align: right;
+} 
+
+article{
+    margin-top: 15px;
+    margin-bottom: 15px;  
+}
+
+.login-form-column{
+    float: left!important;
+}
+
+footer {
+    padding: 5px;
+}
+
+footer .copyright{
+    color: #659ab9;
+    font-size: 12px;
+}
+
+footer {
+    text-align: right;
+}
