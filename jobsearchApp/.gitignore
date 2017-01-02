@@ -1,10 +1,18 @@
 
-# Created by https://www.gitignore.io/api/eclipse,intellij,maven,gradle
+# Created by https://www.gitignore.io/api/netbeans,eclipse,intellij+iml,maven,gradle
+
+### NetBeans ###
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+
 
 ### Eclipse ###
-*.pydevproject
+
 .metadata
-.gradle
 bin/
 tmp/
 *.tmp
@@ -14,6 +22,7 @@ tmp/
 local.properties
 .settings/
 .loadpath
+.recommenders
 
 # Eclipse Core
 .project
@@ -24,7 +33,10 @@ local.properties
 # Locally stored "Eclipse launch configurations"
 *.launch
 
-# CDT-specific
+# PyDev specific (Python IDE for Eclipse)
+*.pydevproject
+
+# CDT-specific (C/C++ Development Tooling)
 .cproject
 
 # JDT-specific (Eclipse Java Development Tools)
@@ -33,11 +45,14 @@ local.properties
 # Java annotation processor (APT)
 .factorypath
 
-# PDT-specific
+# PDT-specific (PHP Development Tools)
 .buildpath
 
 # sbteclipse plugin
 .target
+
+# Tern plugin
+.tern-project
 
 # TeXlipse plugin
 .texlipse
@@ -45,39 +60,35 @@ local.properties
 # STS (Spring Tool Suite)
 .springBeans
 
+# Code Recommenders
+.recommenders/
 
-### Intellij ###
+
+### Intellij+iml ###
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio and Webstorm
-
-.iml
-
-## Directory-based project format:
-.idea/
-.idea
-# if you remove the above rule, at least ignore the following:
+# Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
 
 # User-specific stuff:
-# .idea/workspace.xml
-# .idea/tasks.xml
-# .idea/dictionaries
-# .idea/shelf
+.idea/workspace.xml
+.idea/tasks.xml
 
 # Sensitive or high-churn files:
-# .idea/dataSources.ids
-# .idea/dataSources.xml
-# .idea/sqlDataSources.xml
-# .idea/dynamic.xml
-# .idea/uiDesigner.xml
+.idea/dataSources/
+.idea/dataSources.ids
+.idea/dataSources.xml
+.idea/dataSources.local.xml
+.idea/sqlDataSources.xml
+.idea/dynamic.xml
+.idea/uiDesigner.xml
 
 # Gradle:
-# .idea/gradle.xml
-# .idea/libraries
+.idea/gradle.xml
+.idea/libraries
 
 # Mongo Explorer plugin:
-# .idea/mongoSettings.xml
+.idea/mongoSettings.xml
 
 ## File-based project format:
-*.ipr
 *.iws
 
 ## Plugin-specific files:
@@ -97,6 +108,14 @@ crashlytics.properties
 crashlytics-build.properties
 fabric.properties
 
+### Intellij+iml Patch ###
+# Reason: https://github.com/joeblau/gitignore.io/issues/186#issuecomment-249601023
+
+*.iml
+modules.xml
+.idea/misc.xml
+*.ipr
+
 
 ### Maven ###
 target/
@@ -109,9 +128,13 @@ dependency-reduced-pom.xml
 buildNumber.properties
 .mvn/timing.properties
 
+# Exclude maven wrapper
+!/.mvn/wrapper/maven-wrapper.jar
+
 
 ### Gradle ###
-build/
+.gradle
+/build/
 
 # Ignore Gradle GUI config
 gradle-app.setting
@@ -121,3 +144,8 @@ gradle-app.setting
 
 # Cache of project
 .gradletasknamecache
+
+# # Work around https://youtrack.jetbrains.com/issue/IDEA-116898
+# gradle/wrapper/gradle-wrapper.properties
+
+# End of https://www.gitignore.io/api/netbeans,eclipse,intellij+iml,maven,gradle
