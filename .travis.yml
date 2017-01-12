@@ -1,16 +1,28 @@
-language: java
-jdk: oraclejdk8
-cache:
-  directories:
-  - "$HOME/.m2"
-sudo: false
-install:
-- mvn --version
-before_script:
-- export DISPLAY=:99
-- sh -e /etc/init.d/xvfb start
-- sleep 3
-script:
-- mvn clean install
-- cd ..
-- mvn clean verify site -U -B -fae
++language: java
+ +install: mvn deps
+ +jdk:
+ +	-oraclejdk8
+ +	-oraclejdk7
+ +	-openjdk6
+ +sudo: false
+ +addons:
+ +  apt:
+ +    packages:
+ +      - oracle-java8-installer
+ + ```
+ +
+ +## Build Matrix
+ +
+ +For Java projects, `env` and `jdk` can be given as arrays
+ +to construct a build matrix.
+ +
+ +## Switching JDKs Within One Job
+ +
+ +If your build needs to switch JDKs during a job, you can do so with `jdk_switcher use …`.
+ +
+ +```yaml
+ +script:
+ +  - jdk_switcher use oraclejdk8
+ +  - # do stuff with Java 8
+ +  - jdk_switcher use oraclejdk7
+ +  - # do stuff with Java 7 
